@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+    />
+    <link rel='stylesheet' href='./styles.css'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Мій проект: сайт з фільмами</title>
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="dark-mode">
+    <header class="header sticky sticky--top js-header">
+      <h1 data-aos="flip-down" data-aos-duration="3000">Movie List project</h1>
+    </header>
+    <div class='block'>
+    <section class="container">
+      <h2>Про проект</h2>
+      <p data-aos="fade-left" data-aos-duration="1000">
+        Ласкаво просимо до мого міні проекту - сайту з фільмами. Цей проект
+        дозволяє вам швидко і доступно передивлятись список фільмів, а також
+        дізнатись інформацію про кожен фільм, включаючи рік релізу, акторів,
+        рейтинг, жанр фільмів і так далі.
+      </p>
+      <h2>Основні функції</h2>
+      <ul class="feature-list" data-aos="fade-right" data-aos-duration="1000">
+        <li>Перегляд списку фільмів завантажених через доступну APІ</li>
+        <li>
+          Подивитися детальну інформацію про фільм або серіал, таку як рейтинг,
+          опис, акторський склад та інше.
+        </li>
+        <li>
+          Синхронізувати ваші обрані фільми між веб-версією та мобільним
+          додатком.
+        </li>
+      </ul>
+    </section>  
+    <section class="container">
+      <h2>Відео-перегляд проекту</h2>
+      <div class="video-container">
+        <video id="videoPlayer" controls>
+          <source src="./images/video.MOV" type="video/mp4" />
+        </video>
+        <div class="controls">
+          <button id="playBtn">Play</button>
+          <button id="pauseBtn">Pause</button>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="technology-list">
+        <h2>Технології, які використовувались</h2>
+        <div class="technology" onclick="toggleTechnologyDetails('next-js')">
+          Next.js
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+            id="down-arrow-next-js"
+            class="rotate-on-hover"
+          >
+            <path
+              d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="technology-details" id="next-js-details">
+          <p>
+            <b>Next.js</b> - це фреймворк для React, який дозволяє розробляти
+            універсальні, рендеринг на стороні сервера (SSR) та статичні
+            веб-додатки. Він забезпечує підтримку серверного рендерингу, який
+            допомагає забезпечити швидке завантаження сторінок та кращий
+            індексування пошуковими системами.
+          </p>
+        </div>
+        <div class="technology" onclick="toggleTechnologyDetails('react')">
+          React
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+            id="down-arrow-react"
+            class="rotate-on-hover"
+          >
+            <path
+              d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="technology-details" id="react-details">
+          <p>
+            <b>React</b> - це JavaScript бібліотека для розробки інтерфейсів
+            користувача, що дозволяє створювати ефективні та масштабовані
+            веб-додатки. Він дозволяє створювати компоненти з повторною
+            використовуваністю, що спрощує розробку та підтримку коду.
+          </p>
+        </div>
+        <div
+          class="technology"
+          onclick="toggleTechnologyDetails('react-native')"
+        >
+          React Native
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+            id="down-arrow-react-native"
+            class="rotate-on-hover"
+          >
+            <path
+              d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="technology-details" id="react-native-details">
+          <p>
+            <b>React Native</b> - це фреймворк для розробки мобільних додатків з
+            використанням JavaScript та React. Він дозволяє збудувати мобільні
+            додатки для Android та iOS, використовуючи один і той же код для
+            обох платформ, що допомагає економити час та зусилля.
+          </p>
+        </div>
+        <div class="technology" onclick="toggleTechnologyDetails('ssr')">
+          SSR
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="25"
+            height="25"
+            id="down-arrow-ssr"
+            class="rotate-on-hover"
+          >
+            <path
+              d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="technology-details" id="ssr-details">
+          <p>
+            <b>SSR (Server-Side Rendering)</b> - це метод рендерингу веб-додатків, при якому сторінка
+            генерується на стороні сервера та відправляється клієнту. Цей підхід
+            дозволяє забезпечити швидке відображення контенту, зокрема для SEO і
+            вдосконаленого користувацького досвіду.
+          </p>
+        </div>
+      </div>
+    </section>
+    <button id="theme-toggle-btn">Theme switcher 🌙</button>
+  </div>
+    <footer>
+      <p>© 2023. Усі права захищені.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

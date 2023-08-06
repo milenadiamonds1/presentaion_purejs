@@ -1,0 +1,294 @@
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .block {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+section {
+  padding: 2rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.container.dark-mode {
+  background-color: #1c1c1c;
+  color: #f5f5f5;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.dark-mode {
+  background-color: #8c94bd;
+  color: white;
+}
+
+.sticky {
+  position: sticky;
+  will-change: transform;
+}
+
+.header {
+  background: rgb(243, 104, 224);
+  background: linear-gradient(
+    90deg,
+    rgba(243, 104, 224, 1) 14%,
+    rgba(255, 77, 106, 1) 49%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-bottom-left-radius: 40% 50%;
+  border-bottom-right-radius: 40% 50%;
+  margin-bottom: 100px;
+}
+
+.header.dark-mode {
+  background: #0a1a7e;
+  background: linear-gradient(
+    90deg,
+    #061459 10%,
+    #0a1a7e 40%,
+    rgba(255, 255, 255, 1) 120%
+  );
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 2rem;
+  background-color: #f6e8ea;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container.dark-mode {
+  background-color: #061459;
+}
+
+.container.dark-mode h2 {
+  color: white;
+}
+.container.dark-mode p {
+  color: #d9dbe2;
+}
+.container.dark-mode li {
+  color: #d9dbe2;
+}
+
+.container.dark-mode .technology-details {
+  background-color: #060f59;
+}
+
+.container.dark-mode .technology {
+  background-color: #0a1a7e;
+}
+
+.container.dark-mode button {
+  background-color: #0a1a7e;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #e83e8c;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e83e8c;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c62870;
+}
+
+#theme-toggle-btn {
+  display: block;
+  margin: 2rem auto;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle-btn:hover {
+  background-color: black;
+}
+
+.technology.active svg {
+  transform: rotate(180deg);
+}
+
+.technology-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.technology {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #e83e8c;
+  color: #fff;
+  padding: 8px 16px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.technology svg {
+  fill: #fff;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.technology:hover svg {
+  fill: #fff;
+}
+
+.technology-details {
+  display: none;
+  background-color: #fff;
+  color: #333;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.technology-details.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rotate-on-hover {
+  transition: transform 0.3s ease;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+}
+
+.controls button {
+  margin: 5px;
+  background-color: #e83e8c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls button:hover {
+  background-color: black;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+ul.feature-list {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.feature-list li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
