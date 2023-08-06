@@ -11,6 +11,14 @@ body {
     padding-left: 50px;
     padding-right: 50px;
   }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .controls{
+    display: flex;
+  }
 }
 
 section {
@@ -134,7 +142,6 @@ body.dark-mode {
 }
 
 h2 {
-  font-size: 2rem;
   color: #e83e8c;
   margin-bottom: 1rem;
 }
